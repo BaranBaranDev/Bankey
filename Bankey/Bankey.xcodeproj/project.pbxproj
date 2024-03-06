@@ -15,6 +15,7 @@
 		BE9F35962B937110007516ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9F35942B937110007516ED /* LaunchScreen.storyboard */; };
 		BEB4345F2B982FEA00158D81 /* UIStackView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB4345E2B982FEA00158D81 /* UIStackView+Ext.swift */; };
 		BEB434622B98358D00158D81 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB434612B98358D00158D81 /* OnboardingContainerViewController.swift */; };
+		BEB4346A2B98438000158D81 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB434692B98438000158D81 /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		BE9F35A62B937110007516ED /* BankeyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB4345E2B982FEA00158D81 /* UIStackView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Ext.swift"; sourceTree = "<group>"; };
 		BEB434612B98358D00158D81 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
+		BEB434692B98438000158D81 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				BEB434612B98358D00158D81 /* OnboardingContainerViewController.swift */,
+				BEB434692B98438000158D81 /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				BEB434622B98358D00158D81 /* OnboardingContainerViewController.swift in Sources */,
 				BEB4345F2B982FEA00158D81 /* UIStackView+Ext.swift in Sources */,
 				BE32A15E2B946151000DDBB7 /* LoginView.swift in Sources */,
+				BEB4346A2B98438000158D81 /* OnboardingViewController.swift in Sources */,
 				BE9F358E2B93710F007516ED /* LoginViewController.swift in Sources */,
 				BE9F358A2B93710F007516ED /* AppDelegate.swift in Sources */,
 			);
