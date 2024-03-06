@@ -13,6 +13,8 @@
 		BE9F358E2B93710F007516ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F358D2B93710F007516ED /* LoginViewController.swift */; };
 		BE9F35932B937110007516ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE9F35922B937110007516ED /* Assets.xcassets */; };
 		BE9F35962B937110007516ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9F35942B937110007516ED /* LaunchScreen.storyboard */; };
+		BEB4345F2B982FEA00158D81 /* UIStackView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB4345E2B982FEA00158D81 /* UIStackView+Ext.swift */; };
+		BEB434622B98358D00158D81 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB434612B98358D00158D81 /* OnboardingContainerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		BE9F35972B937110007516ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE9F359C2B937110007516ED /* BankeyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9F35A62B937110007516ED /* BankeyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEB4345E2B982FEA00158D81 /* UIStackView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Ext.swift"; sourceTree = "<group>"; };
+		BEB434612B98358D00158D81 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				BE568C642B95BD97009D812A /* UIView+Ext.swift */,
+				BEB4345E2B982FEA00158D81 /* UIStackView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -119,11 +124,20 @@
 			isa = PBXGroup;
 			children = (
 				BE9F35892B93710F007516ED /* AppDelegate.swift */,
+				BEB434602B98354B00158D81 /* Onboarding */,
 				BE32A15A2B945E34000DDBB7 /* Login */,
 				BE568C672B95BF7D009D812A /* Extensions */,
 				BE32A1572B945BC5000DDBB7 /* Files */,
 			);
 			path = Bankey;
+			sourceTree = "<group>";
+		};
+		BEB434602B98354B00158D81 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				BEB434612B98358D00158D81 /* OnboardingContainerViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +271,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE568C652B95BD97009D812A /* UIView+Ext.swift in Sources */,
+				BEB434622B98358D00158D81 /* OnboardingContainerViewController.swift in Sources */,
+				BEB4345F2B982FEA00158D81 /* UIStackView+Ext.swift in Sources */,
 				BE32A15E2B946151000DDBB7 /* LoginView.swift in Sources */,
 				BE9F358E2B93710F007516ED /* LoginViewController.swift in Sources */,
 				BE9F358A2B93710F007516ED /* AppDelegate.swift in Sources */,

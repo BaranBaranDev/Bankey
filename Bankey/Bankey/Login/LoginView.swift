@@ -68,9 +68,10 @@ extension LoginView {
     }
     
     func layout(){
-        stackView.addArrangedSubview(usernameTextField)
-        stackView.addArrangedSubview(dividerView)
-        stackView.addArrangedSubview(passwordTextField)
+        //stackView.addArrangedSubview(usernameTextField)
+        //stackView.addArrangedSubview(dividerView)
+        //stackView.addArrangedSubview(passwordTextField)
+        stackView.addArrangedSubviews(usernameTextField,dividerView,passwordTextField)
         addSubview(stackView)
         
         // stackView layout

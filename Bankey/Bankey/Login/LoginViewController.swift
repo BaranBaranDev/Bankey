@@ -42,10 +42,14 @@ extension LoginViewController{
         
         //sigInButton
         sigInButton.setTitle("Sig In", for: .normal)
+        sigInButton.setTitleColor(.white, for: .normal)
+        //sigInButton.backgroundColor = UIColor.brown
         sigInButton.configuration = .filled()
+        sigInButton.configuration?.baseBackgroundColor = .systemBrown
         sigInButton.configuration?.imagePadding = 8
         sigInButton.addTarget(self, action: #selector(sigInTapped), for: .touchUpInside)
         sigInButton.layer.cornerRadius = 15
+        
         
         //errorMessageLabel
         errorMessageLabel.text = "Error failure"
@@ -53,6 +57,9 @@ extension LoginViewController{
         errorMessageLabel.textAlignment = .center
         errorMessageLabel.numberOfLines = 0
         errorMessageLabel.isHidden = true
+        
+        
+    
         
         
     }
@@ -124,3 +131,7 @@ extension LoginViewController{
         
     }
 }
+
+
+
+
