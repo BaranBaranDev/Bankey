@@ -1,20 +1,23 @@
-//
-//  OnboardingContainerViewController.swift
-//  Bankey
-//
-//  Created by Baran Baran on 6.03.2024.
-//
-
 import UIKit
 
 class OnboardingContainerViewController: UIViewController {
+    // MARK: - Properties
     
     let pageViewController: UIPageViewController
     var pages = [UIViewController]()
-    var currentVC: UIViewController {
-        didSet {
-        }
-    }
+    var currentVC: UIViewController
+    
+    
+    
+    private lazy var closeButton : UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Close", for: .normal)
+        button.addTarget(self, action: #selector(closeTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    
+    // MARK: - İnitialization
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
@@ -36,9 +39,19 @@ class OnboardingContainerViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+        layout()
         
+    }
+}
+
+// MARK: - Helpers
+
+extension OnboardingContainerViewController {
+    private func setup() {
         view.backgroundColor = .systemBrown
         
         addChild(pageViewController)
@@ -60,7 +73,28 @@ class OnboardingContainerViewController: UIViewController {
     }
 }
 
+
+extension OnboardingContainerViewController {
+    
+    private func layout(){
+        view.addSubviews(closeButton)
+        NSLayoutConstraint.activate([
+            closeButton.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 2),
+            closeButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2)
+        ])
+    }
+}
+
+
+// MARK: - Actions
+extension OnboardingContainerViewController{
+    @objc func closeTapped(){
+        //TODO
+    }
+}
+
 // MARK: - UIPageViewControllerDataSource
+
 extension OnboardingContainerViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -91,4 +125,3 @@ extension OnboardingContainerViewController: UIPageViewControllerDataSource {
         return pages.firstIndex(of: self.currentVC) ?? 0
     }
 }
-

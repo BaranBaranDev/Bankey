@@ -14,6 +14,7 @@ class OnboardingViewController: UIViewController {
     private let imageView = UIImageView()
     private let label = UILabel()
     
+    
     private var heroImageView = ""
     private var titleText = ""
     
@@ -44,7 +45,7 @@ class OnboardingViewController: UIViewController {
 
 extension OnboardingViewController {
     private func style() {
-        view.backgroundColor = .systemBackground 
+        view.backgroundColor = .systemBackground
     
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
