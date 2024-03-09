@@ -7,9 +7,27 @@
 
 import UIKit
 
+// DummyViewControllerDelegate
+protocol DummyViewControllerDelegate: AnyObject {
+    func didlogOut()
+}
+
+
+//LoginViewDelegate
+protocol LoginViewDelegate: AnyObject {
+    func didLogin()
+}
+
+
+
 class LoginViewController: UIViewController {
     
     // MARK: - Properties
+    
+    
+    private let titleLabel = UILabel()
+    private let subtitleLabel = UILabel()
+    
     
     private let loginView = LoginView()
     
@@ -26,12 +44,21 @@ class LoginViewController: UIViewController {
         return loginView.passwordTextField.text
     }
     
+    // delegate
+    weak var delegate : LoginViewDelegate?
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
         layout()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        sigInButton.configuration?.showsActivityIndicator = false
+    }
+    
 }
 
 // MARK: - Helpers
@@ -39,6 +66,26 @@ class LoginViewController: UIViewController {
 extension LoginViewController{
     private func style(){
         //loginView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // title
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.textAlignment = .center
+        titleLabel.font = .preferredFont(forTextStyle: .extraLargeTitle)
+        titleLabel.adjustsFontForContentSizeCategory = true
+        titleLabel.text = "Bankey"
+        titleLabel.alpha = 1
+        
+        //subtitle
+        subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        subtitleLabel.textAlignment = .center
+        subtitleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+        subtitleLabel.adjustsFontForContentSizeCategory = true
+        subtitleLabel.numberOfLines = 0
+        subtitleLabel.text = "Your premium source for all things banking!"
+        subtitleLabel.alpha = 1
+       
+        
+        
         
         //sigInButton
         sigInButton.setTitle("Sig In", for: .normal)
@@ -59,20 +106,34 @@ extension LoginViewController{
         errorMessageLabel.isHidden = true
         
         
-    
+        
         
         
     }
     
     private func layout(){
-        //view.addSubview(loginView)
-        view.addSubviews(loginView,sigInButton,errorMessageLabel)
+        view.addSubviews(titleLabel,subtitleLabel,loginView,sigInButton,errorMessageLabel)
+        
+        // Title && Subtitle
+        NSLayoutConstraint.activate([
+            titleLabel.bottomAnchor.constraint(equalTo: subtitleLabel.topAnchor, constant: -50),
+            titleLabel.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
+            loginView.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
+            subtitleLabel.bottomAnchor.constraint(equalTo: loginView.topAnchor, constant: -50),
+            subtitleLabel.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
+            loginView.trailingAnchor.constraint(equalTo: subtitleLabel.trailingAnchor),
+            
+        ])
+        
+        
+        
         
         // loginView
         NSLayoutConstraint.activate([
             loginView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             loginView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 1),
+           
         ])
         
         
@@ -114,11 +175,13 @@ extension LoginViewController{
         
         if username.isEmpty || password.isEmpty {
             configurationMessage(withMessage: "Username/Password cannot blank")
+            
             return
         }
         
         if username == "Baran" && password == "123456" {
             sigInButton.configuration?.showsActivityIndicator = true
+            delegate?.didLogin()
         }else{
             configurationMessage(withMessage: "Incorrect Username/Password")
             return

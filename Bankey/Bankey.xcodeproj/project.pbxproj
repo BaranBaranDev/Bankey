@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE2096562B99F12C00D811AF /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2096552B99F12C00D811AF /* DummyViewController.swift */; };
 		BE32A15E2B946151000DDBB7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE32A15D2B946151000DDBB7 /* LoginView.swift */; };
 		BE568C652B95BD97009D812A /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE568C642B95BD97009D812A /* UIView+Ext.swift */; };
+		BE6A151A2B9C9AAC00117304 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A15192B9C9AAC00117304 /* LocalState.swift */; };
 		BE9F358A2B93710F007516ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F35892B93710F007516ED /* AppDelegate.swift */; };
 		BE9F358E2B93710F007516ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F358D2B93710F007516ED /* LoginViewController.swift */; };
 		BE9F35932B937110007516ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE9F35922B937110007516ED /* Assets.xcassets */; };
@@ -36,8 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE2096552B99F12C00D811AF /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		BE32A15D2B946151000DDBB7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BE568C642B95BD97009D812A /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		BE6A15192B9C9AAC00117304 /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		BE9F35862B93710F007516ED /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9F35892B93710F007516ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE9F358D2B93710F007516ED /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 			children = (
 				BE9F358D2B93710F007516ED /* LoginViewController.swift */,
 				BE32A15D2B946151000DDBB7 /* LoginView.swift */,
+				BE2096552B99F12C00D811AF /* DummyViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -102,6 +107,14 @@
 				BEB4345E2B982FEA00158D81 /* UIStackView+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BE6A15182B9C9A2400117304 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BE6A15192B9C9AAC00117304 /* LocalState.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		BE9F357D2B93710F007516ED = {
@@ -125,6 +138,7 @@
 		BE9F35882B93710F007516ED /* Bankey */ = {
 			isa = PBXGroup;
 			children = (
+				BE6A15182B9C9A2400117304 /* Utils */,
 				BE9F35892B93710F007516ED /* AppDelegate.swift */,
 				BEB434602B98354B00158D81 /* Onboarding */,
 				BE32A15A2B945E34000DDBB7 /* Login */,
@@ -274,12 +288,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE568C652B95BD97009D812A /* UIView+Ext.swift in Sources */,
+				BE6A151A2B9C9AAC00117304 /* LocalState.swift in Sources */,
 				BEB434622B98358D00158D81 /* OnboardingContainerViewController.swift in Sources */,
 				BEB4345F2B982FEA00158D81 /* UIStackView+Ext.swift in Sources */,
 				BE32A15E2B946151000DDBB7 /* LoginView.swift in Sources */,
 				BEB4346A2B98438000158D81 /* OnboardingViewController.swift in Sources */,
 				BE9F358E2B93710F007516ED /* LoginViewController.swift in Sources */,
 				BE9F358A2B93710F007516ED /* AppDelegate.swift in Sources */,
+				BE2096562B99F12C00D811AF /* DummyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
