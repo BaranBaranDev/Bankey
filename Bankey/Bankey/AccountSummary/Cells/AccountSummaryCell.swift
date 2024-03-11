@@ -7,7 +7,10 @@
 
 import UIKit
 
+
 class AccountSummaryCell: UITableViewCell {
+    
+    let viewModel: AccountSummaryViewModel? = nil
     
     // MARK: - Properties
     static let reuseID = "AccountSummaryCell"
@@ -19,6 +22,7 @@ class AccountSummaryCell: UITableViewCell {
     let typeLabel = UILabel()
     let underlineView = UIView()
     let nameLabel = UILabel()
+    
     let balanceStackView = UIStackView()
     let balanceLabel = UILabel()
     let balanceAmountLabel = UILabel()
@@ -145,3 +149,24 @@ extension AccountSummaryCell {
     }
 }
 
+
+// MARK: - ViewModel Configure Ext
+
+extension AccountSummaryCell {
+    func configure(with vm: AccountSummaryViewModel) {
+        typeLabel.text = vm.accountType.rawValue
+        nameLabel.text = vm.accountName
+        switch vm.accountType {
+    
+        case .Banking:
+            underlineView.backgroundColor = .systemYellow
+            balanceLabel.text = "Current balance"
+        case .CreditCard:
+            underlineView.backgroundColor = .systemRed
+            balanceLabel.text = "Current balance"
+        case .Investment:
+            underlineView.backgroundColor = .systemGreen
+            balanceLabel.text = "Value"
+        }
+    }
+}
