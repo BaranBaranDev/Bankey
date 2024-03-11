@@ -91,13 +91,33 @@ extension AccountSummaryViewController: UITableViewDelegate {
 // MARK: - fetchData
 extension AccountSummaryViewController {
     private func fetchData() {
-      
-        let savings = AccountSummaryViewModel(accountType: .Banking, accountName: "Basic Savings")
-        let visa = AccountSummaryViewModel(accountType: .CreditCard, accountName: "Visa Avion Card")
-        let  investment = AccountSummaryViewModel(accountType: .Investment, accountName: "Tax-Free Saver")
+        
+        
+        let savings = AccountSummaryViewModel(accountType: .Banking,
+                                              accountName: "Basic Savings",
+                                              balance: 929466.23)
+        let chequing = AccountSummaryViewModel(accountType: .Banking,
+                                               accountName: "No-Fee All-In Chequing",
+                                               balance: 17562.44)
+        let visa = AccountSummaryViewModel(accountType: .CreditCard,
+                                           accountName: "Visa Avion Card",
+                                           balance: 412.83)
+        let masterCard = AccountSummaryViewModel(accountType: .CreditCard,
+                                                 accountName: "Student Mastercard",
+                                                 balance: 50.83)
+        let investment1 = AccountSummaryViewModel(accountType: .Investment,
+                                                  accountName: "Tax-Free Saver",
+                                                  balance: 2000.00)
+        let investment2  = AccountSummaryViewModel(accountType: .Investment,
+                                                   accountName: "Growth Fund",
+                                                   balance: 15000.00)
+
         
         accounts.append(savings)
+        accounts.append(chequing)
         accounts.append(visa)
-        accounts.append(investment)
+        accounts.append(masterCard)
+        accounts.append(investment1)
+        accounts.append(investment2)
     }
 }

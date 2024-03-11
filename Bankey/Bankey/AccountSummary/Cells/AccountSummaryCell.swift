@@ -27,7 +27,7 @@ class AccountSummaryCell: UITableViewCell {
     let balanceLabel = UILabel()
     let balanceAmountLabel = UILabel()
     let chevronImageView = UIImageView()
-
+    
     
     // MARK: - İnitialization
     
@@ -69,35 +69,35 @@ extension AccountSummaryCell {
         //balanceStackView
         balanceStackView.axis = .vertical
         balanceStackView.spacing = 0
-
+        
         //balanceLabel
         balanceLabel.translatesAutoresizingMaskIntoConstraints = false
         balanceLabel.font = UIFont.preferredFont(forTextStyle: .body)
         balanceLabel.textAlignment = .right
         balanceLabel.text = "Some balance"
-
+        
         //balanceAmountLabel
         balanceAmountLabel.translatesAutoresizingMaskIntoConstraints = false
         balanceAmountLabel.textAlignment = .right
         balanceAmountLabel.attributedText = makeFormattedBalance(dollars: "929,466", cents: "23")
-
+        
         //chevronImage
         let chevronImage = UIImage(systemName: "chevron.right")!.withTintColor(appColor, renderingMode: .alwaysOriginal)
         chevronImageView.image = chevronImage
-
-       
+        
+        
     }
     
     
     private func layout() {
         
-//        typeLabel
+        //        typeLabel
         NSLayoutConstraint.activate([
             typeLabel.topAnchor.constraint(equalToSystemSpacingBelow: topAnchor, multiplier: 2),
             typeLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2),
         ])
         
-//        underlineView
+        //        underlineView
         NSLayoutConstraint.activate([
             underlineView.topAnchor.constraint(equalToSystemSpacingBelow: typeLabel.bottomAnchor, multiplier: 1),
             underlineView.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2),
@@ -106,20 +106,20 @@ extension AccountSummaryCell {
         ])
         
         
-//        nameLabel
+        //        nameLabel
         NSLayoutConstraint.activate([
             nameLabel.topAnchor.constraint(equalToSystemSpacingBelow: underlineView.bottomAnchor, multiplier: 2),
             nameLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2)
         ])
         
-//        balanceStackView
+        //        balanceStackView
         NSLayoutConstraint.activate([
             balanceStackView.topAnchor.constraint(equalToSystemSpacingBelow: underlineView.bottomAnchor, multiplier: 0),
             balanceStackView.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 4),
             trailingAnchor.constraint(equalToSystemSpacingAfter: balanceStackView.trailingAnchor, multiplier: 4),
         ])
         
-//        chevronImageView
+        //        chevronImageView
         NSLayoutConstraint.activate([
             chevronImageView.topAnchor.constraint(equalToSystemSpacingBelow: underlineView.bottomAnchor, multiplier: 1),
             trailingAnchor.constraint(equalToSystemSpacingAfter: chevronImageView.trailingAnchor, multiplier: 1)
@@ -156,8 +156,9 @@ extension AccountSummaryCell {
     func configure(with vm: AccountSummaryViewModel) {
         typeLabel.text = vm.accountType.rawValue
         nameLabel.text = vm.accountName
+        balanceAmountLabel.attributedText = vm.balanceAsAttributedString
         switch vm.accountType {
-    
+            
         case .Banking:
             underlineView.backgroundColor = .systemYellow
             balanceLabel.text = "Current balance"
@@ -167,6 +168,8 @@ extension AccountSummaryCell {
         case .Investment:
             underlineView.backgroundColor = .systemGreen
             balanceLabel.text = "Value"
+            
+            
         }
     }
 }
