@@ -8,13 +8,13 @@
 import UIKit
 
 // DummyViewControllerDelegate
-protocol DummyViewControllerDelegate: AnyObject {
+protocol LogoutDelegate: AnyObject {
     func didlogOut()
 }
 
 
 //LoginViewDelegate
-protocol LoginViewDelegate: AnyObject {
+protocol LoginViewControllerDelegate: AnyObject {
     func didLogin()
 }
 
@@ -45,7 +45,7 @@ class LoginViewController: UIViewController {
     }
     
     // delegate
-    weak var delegate : LoginViewDelegate?
+    weak var delegate : LoginViewControllerDelegate?
     
     // MARK: - LifeCycle
     override func viewDidLoad() {

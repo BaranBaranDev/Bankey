@@ -9,7 +9,7 @@ import UIKit
 
 class DummyViewController: UIViewController {
     
-    weak var delegate : DummyViewControllerDelegate?
+    weak var delegate : LogoutDelegate?
     
     let stackView = UIStackView()
     let logOutButton = UIButton()

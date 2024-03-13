@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		BE191C222B9DD5C60082AA5A /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE191C212B9DD5C60082AA5A /* UIViewController+Ext.swift */; };
 		BE191C242B9DDD870082AA5A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE191C232B9DDD870082AA5A /* MainViewController.swift */; };
-		BE2096562B99F12C00D811AF /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2096552B99F12C00D811AF /* DummyViewController.swift */; };
 		BE32A15E2B946151000DDBB7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE32A15D2B946151000DDBB7 /* LoginView.swift */; };
 		BE53F3212BA1974C006DF7E0 /* currencyFormmatterUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE53F3202BA1974C006DF7E0 /* currencyFormmatterUnitTest.swift */; };
 		BE568C652B95BD97009D812A /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE568C642B95BD97009D812A /* UIView+Ext.swift */; };
@@ -42,7 +41,6 @@
 /* Begin PBXFileReference section */
 		BE191C212B9DD5C60082AA5A /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		BE191C232B9DDD870082AA5A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		BE2096552B99F12C00D811AF /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		BE32A15D2B946151000DDBB7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BE53F3172BA1925A006DF7E0 /* BankeyUnityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyUnityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE53F3202BA1974C006DF7E0 /* currencyFormmatterUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = currencyFormmatterUnitTest.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 			children = (
 				BE9F358D2B93710F007516ED /* LoginViewController.swift */,
 				BE32A15D2B946151000DDBB7 /* LoginView.swift */,
-				BE2096552B99F12C00D811AF /* DummyViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -324,7 +321,6 @@
 				BE9F358E2B93710F007516ED /* LoginViewController.swift in Sources */,
 				BE9F358A2B93710F007516ED /* AppDelegate.swift in Sources */,
 				BEBC73F12B9F480800E88EE7 /* CurrencyFormatter.swift in Sources */,
-				BE2096562B99F12C00D811AF /* DummyViewController.swift in Sources */,
 				BEF2E27B2B9EA6EB00838419 /* AccountSummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
