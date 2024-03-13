@@ -39,6 +39,7 @@ class AccountSummaryHeaderView: UIView {
         
         style()
         layout()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -56,6 +57,8 @@ class AccountSummaryHeaderView: UIView {
 
 extension AccountSummaryHeaderView {
     private func style() {
+       
+        
         backgroundColor = appColor
         translatesAutoresizingMaskIntoConstraints = false
        
@@ -82,12 +85,9 @@ extension AccountSummaryHeaderView {
         dateLabel.numberOfLines = 0
         
         
-       
-        
-        
-        
-        
     }
+    
+
     
     private func layout() {
         addSubviews(stackView,imageView)

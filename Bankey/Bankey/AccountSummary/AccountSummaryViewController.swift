@@ -29,26 +29,39 @@ extension AccountSummaryViewController {
     private func setup() {
         setupTableView()
         fetchData()
+        configureTableView()
+       
+                  
     }
     
+  
+    
     private func setupTableView() {
+   
+
+        tableView.backgroundColor = appColor
+        view.backgroundColor = appColor
+        tableView.backgroundView?.backgroundColor = appColor
+        
         tableView.delegate = self
         tableView.dataSource = self
+        
         
         tableView.register(AccountSummaryCell.self, forCellReuseIdentifier: AccountSummaryCell.reuseID)
         tableView.rowHeight = AccountSummaryCell.rowHeight
         tableView.tableFooterView = UIView()
+       
         
         view.addSubviews(tableView,headerView)
-        
+      
         // headerView layout
         NSLayoutConstraint.activate([
-            headerView.topAnchor.constraint(equalTo: view.topAnchor),
+            headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             headerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             headerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             
         ])
-       
+    
         
         // tableView layout
         NSLayoutConstraint.activate([
@@ -56,6 +69,23 @@ extension AccountSummaryViewController {
             tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+        
+        
+    }
+    
+    
+    private func configureTableView(){
+        // TableView'ın arkasına bir arka plan görüntüsü ekleyelim
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = appColor
+        view.insertSubview(backgroundView, belowSubview: tableView)
+        backgroundView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
+            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            backgroundView.bottomAnchor.constraint(equalTo: tableView.topAnchor)
         ])
     }
 }
@@ -68,6 +98,7 @@ extension AccountSummaryViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: AccountSummaryCell.reuseID, for: indexPath) as! AccountSummaryCell
         let account = accounts[indexPath.row]
         cell.configure(with: account)
+        
         
         return cell
     }
@@ -85,8 +116,6 @@ extension AccountSummaryViewController: UITableViewDelegate {
     }
 }
 
-
-// MARK: - fetchData
 
 // MARK: - fetchData
 extension AccountSummaryViewController {
@@ -121,3 +150,7 @@ extension AccountSummaryViewController {
         accounts.append(investment2)
     }
 }
+
+
+
+
