@@ -57,6 +57,7 @@ extension LoginView {
         passwordTextField.placeholder = "Password"
         passwordTextField.delegate = self
         passwordTextField.isSecureTextEntry = true
+        passwordTextField.enablePasswordToggle()
         
         // dividerView
         dividerView.translatesAutoresizingMaskIntoConstraints = false
@@ -65,12 +66,13 @@ extension LoginView {
         // CALayer
         layer.cornerRadius = 5
         clipsToBounds = true
+        
+        // giriş bilgisi
+        passwordTextField.text = "123456"
+        usernameTextField.text = "Baran"
     }
     
     func layout(){
-        //stackView.addArrangedSubview(usernameTextField)
-        //stackView.addArrangedSubview(dividerView)
-        //stackView.addArrangedSubview(passwordTextField)
         stackView.addArrangedSubviews(usernameTextField,dividerView,passwordTextField)
         addSubview(stackView)
         
