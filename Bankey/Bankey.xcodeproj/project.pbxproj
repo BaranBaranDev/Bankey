@@ -11,6 +11,7 @@
 		BE191C242B9DDD870082AA5A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE191C232B9DDD870082AA5A /* MainViewController.swift */; };
 		BE2D33BC2BA1E20100A03D22 /* Notification.Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D33BB2BA1E20100A03D22 /* Notification.Name.swift */; };
 		BE32A15E2B946151000DDBB7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE32A15D2B946151000DDBB7 /* LoginView.swift */; };
+		BE344C042BA2E0390035B3F6 /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE344C032BA2E0390035B3F6 /* ShakeyBellView.swift */; };
 		BE53F3212BA1974C006DF7E0 /* currencyFormmatterUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE53F3202BA1974C006DF7E0 /* currencyFormmatterUnitTest.swift */; };
 		BE568C652B95BD97009D812A /* UIView+Utilis.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE568C642B95BD97009D812A /* UIView+Utilis.swift */; };
 		BE6A151A2B9C9AAC00117304 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A15192B9C9AAC00117304 /* LocalState.swift */; };
@@ -45,6 +46,7 @@
 		BE191C232B9DDD870082AA5A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BE2D33BB2BA1E20100A03D22 /* Notification.Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.Name.swift; sourceTree = "<group>"; };
 		BE32A15D2B946151000DDBB7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BE344C032BA2E0390035B3F6 /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
 		BE53F3172BA1925A006DF7E0 /* BankeyUnityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyUnityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE53F3202BA1974C006DF7E0 /* currencyFormmatterUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = currencyFormmatterUnitTest.swift; sourceTree = "<group>"; };
 		BE568C642B95BD97009D812A /* UIView+Utilis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utilis.swift"; sourceTree = "<group>"; };
@@ -104,6 +106,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		BE344C022BA2E01C0035B3F6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BE344C032BA2E0390035B3F6 /* ShakeyBellView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		BE53F3182BA1925A006DF7E0 /* BankeyUnityTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +163,7 @@
 				BE32A15A2B945E34000DDBB7 /* Login */,
 				BEB434602B98354B00158D81 /* Onboarding */,
 				BEF2E2792B9EA6BA00838419 /* AccountSummary */,
+				BE344C022BA2E01C0035B3F6 /* Components */,
 				BE6A15182B9C9A2400117304 /* Utils */,
 				BE32A1572B945BC5000DDBB7 /* Files */,
 			);
@@ -308,6 +319,7 @@
 				BEBC73E92B9F149C00E88EE7 /* AccountSummaryCell.swift in Sources */,
 				BEF2E27E2B9EB0BD00838419 /* AccountSummaryHeaderView.swift in Sources */,
 				BE568C652B95BD97009D812A /* UIView+Utilis.swift in Sources */,
+				BE344C042BA2E0390035B3F6 /* ShakeyBellView.swift in Sources */,
 				BE191C242B9DDD870082AA5A /* MainViewController.swift in Sources */,
 				BE6A151A2B9C9AAC00117304 /* LocalState.swift in Sources */,
 				BE191C222B9DD5C60082AA5A /* UIViewController+Utilis.swift in Sources */,

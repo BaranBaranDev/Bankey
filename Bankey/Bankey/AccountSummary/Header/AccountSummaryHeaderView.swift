@@ -30,6 +30,10 @@ class AccountSummaryHeaderView: UIView {
         return stackView
     }()
     
+    private let shakeyBellView = ShakeyBellView()
+    
+    
+    
     
     
     
@@ -90,7 +94,7 @@ extension AccountSummaryHeaderView {
 
     
     private func layout() {
-        addSubviews(stackView,imageView)
+        addSubviews(stackView,imageView,shakeyBellView)
         stackView.addArrangedSubviews(bankeyLabel,messageLabel,nameLabel,dateLabel)
         
         NSLayoutConstraint.activate([
@@ -107,6 +111,11 @@ extension AccountSummaryHeaderView {
             imageView.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
             imageView.heightAnchor.constraint(equalToConstant: 75),
             imageView.widthAnchor.constraint(equalToConstant: 75)
+        ])
+        
+        NSLayoutConstraint.activate([
+            shakeyBellView.bottomAnchor.constraint(lessThanOrEqualToSystemSpacingBelow: bottomAnchor, multiplier: 1),
+            trailingAnchor.constraint(equalToSystemSpacingAfter: shakeyBellView.trailingAnchor, multiplier: 2)
         ])
         
       
