@@ -10,7 +10,7 @@ import UIKit
 
 class AccountSummaryHeaderView: UIView {
     
-    // MARK: - Properties
+    // MARK: - UI Elements
     
     private let bankeyLabel = UILabel()
     private let messageLabel = UILabel()
@@ -32,10 +32,7 @@ class AccountSummaryHeaderView: UIView {
     
     private let shakeyBellView = ShakeyBellView()
     
-    
-    
-    
-    
+
     
     // MARK: - İnitialization
     override init(frame: CGRect) {
@@ -92,6 +89,7 @@ extension AccountSummaryHeaderView {
     }
     
 
+
     
     private func layout() {
         addSubviews(stackView,imageView,shakeyBellView)
@@ -124,6 +122,13 @@ extension AccountSummaryHeaderView {
 
 
 
+extension AccountSummaryHeaderView{
+     func configure(viewModel model : AccountSummaryHeaderViewModel){
+        nameLabel.text = model.name
+        messageLabel.text = model.welcomeMessage
+        dateLabel.text = model.dateFormatted
+    }
+}
 
 
 
